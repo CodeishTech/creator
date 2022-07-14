@@ -48,6 +48,7 @@ export default function Creator() {
       if(result.data.message.success){
         setSuccess(result.data.message.success);
         localStorage.setItem('token', result.data.token);
+        window.location.reload(false);
       }
     })
     .catch(function (error) {
